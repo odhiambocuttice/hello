@@ -1,0 +1,9 @@
+action: py36, msg: getenv
+cwd: /home/cuttice/package/code/.tox
+cmd: /home/cuttice/package/bin/python3 -m virtualenv --no-download --python /home/cuttice/package/bin/python3 py36
+Already using interpreter /home/cuttice/package/bin/python3
+Using base prefix '/usr'
+New python executable in /home/cuttice/package/code/.tox/py36/bin/python3
+Also creating executable in /home/cuttice/package/code/.tox/py36/bin/python
+Installing setuptools, pip, wheel...
+done.

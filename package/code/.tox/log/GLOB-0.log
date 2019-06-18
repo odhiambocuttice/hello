@@ -1,0 +1,35 @@
+action: GLOB, msg: packaging
+cwd: /home/cuttice/package/code
+cmd: /home/cuttice/package/bin/python3 setup.py sdist --formats=zip --dist-dir .tox/dist
+running sdist
+running egg_info
+writing hello_curtis.egg-info/PKG-INFO
+writing dependency_links to hello_curtis.egg-info/dependency_links.txt
+writing requirements to hello_curtis.egg-info/requires.txt
+writing top-level names to hello_curtis.egg-info/top_level.txt
+reading manifest file 'hello_curtis.egg-info/SOURCES.txt'
+writing manifest file 'hello_curtis.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating hello curtis-1.1.1
+creating hello curtis-1.1.1/hello_curtis.egg-info
+copying files to hello curtis-1.1.1...
+copying setup.cfg -> hello curtis-1.1.1
+copying setup.py -> hello curtis-1.1.1
+copying hello_curtis.egg-info/PKG-INFO -> hello curtis-1.1.1/hello_curtis.egg-info
+copying hello_curtis.egg-info/SOURCES.txt -> hello curtis-1.1.1/hello_curtis.egg-info
+copying hello_curtis.egg-info/dependency_links.txt -> hello curtis-1.1.1/hello_curtis.egg-info
+copying hello_curtis.egg-info/requires.txt -> hello curtis-1.1.1/hello_curtis.egg-info
+copying hello_curtis.egg-info/top_level.txt -> hello curtis-1.1.1/hello_curtis.egg-info
+Writing hello curtis-1.1.1/setup.cfg
+creating '.tox/dist/hello curtis-1.1.1.zip' and adding 'hello curtis-1.1.1' to it
+adding 'hello curtis-1.1.1/PKG-INFO'
+adding 'hello curtis-1.1.1/setup.cfg'
+adding 'hello curtis-1.1.1/setup.py'
+adding 'hello curtis-1.1.1/hello_curtis.egg-info/SOURCES.txt'
+adding 'hello curtis-1.1.1/hello_curtis.egg-info/dependency_links.txt'
+adding 'hello curtis-1.1.1/hello_curtis.egg-info/top_level.txt'
+adding 'hello curtis-1.1.1/hello_curtis.egg-info/PKG-INFO'
+adding 'hello curtis-1.1.1/hello_curtis.egg-info/requires.txt'
+removing 'hello curtis-1.1.1' (and everything under it)

@@ -1,0 +1,14 @@
+action: py36, msg: installpkg
+cwd: /home/cuttice/package/code
+cmd: /home/cuttice/package/code/.tox/py36/bin/python -m pip install --no-deps -U '.tox/.tmp/package/1/hello curtis-1.1.1.zip'
+Processing ./.tox/.tmp/package/1/hello curtis-1.1.1.zip
+Building wheels for collected packages: hello-curtis
+  Building wheel for hello-curtis (setup.py): started
+  Building wheel for hello-curtis (setup.py): finished with status 'done'
+  Stored in directory: /home/cuttice/.cache/pip/wheels/5e/25/05/c046055beb99acca0cd5d24b1f395e0fb7ae16f5f57021653c
+Successfully built hello-curtis
+Installing collected packages: hello-curtis
+  Found existing installation: hello-curtis 1.1.1
+    Not uninstalling hello-curtis at /home/cuttice/package/code, outside environment /home/cuttice/package/code/.tox/py36
+    Can't uninstall 'hello-curtis'. No files were found to uninstall.
+Successfully installed hello-curtis-1.1.1
