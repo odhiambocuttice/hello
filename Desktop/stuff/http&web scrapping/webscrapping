@@ -1,0 +1,26 @@
+Web scraping is about downloading structured data from the web, selecting some of that data, and passing along what you selected to another process.
+
+http status codes
+200 -success
+300 - redirects
+400 - client errors
+500 - server errors - server crushes
+
+Requests is a Python module that you can use to send all kinds of HTTP requests
+
+
+If you don't want the Requests library to automatically follow redirects, then you can disable it by passing the allow_redirects=False parameter along with the request.
+
+HTTP 301 and 302 responses are used for permanent and temporary redirection, respectively.
+
+Passing Parameters in GET
+In some cases, you'll need to pass parameters along with your GET requests, which take the form of query strings. To do this, we need to pass these values in the params parameter,
+
+
+Handling Redirections
+Redirection in HTTP means forwarding the network request to a different URL. For example, if we make a request to "http://www.github.com", it will redirect to "https://github.com" using a 301 redirect.
+
+
+The Session Object
+The session object is mainly used to persist certain parameters, like cookies, across different HTTP requests. A session object may use a single TCP connection for handling multiple network requests and responses, which results in performance improvement.
+

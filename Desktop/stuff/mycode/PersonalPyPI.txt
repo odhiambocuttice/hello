@@ -1,0 +1,92 @@
+#1
+Personal PyPI
+
+If you want to install packages from a source other than PyPI (say, if your packages are proprietary), you can do it by hosting a simple HTTP server, running from the directory which holds those packages which need to be installed.
+
+an example
+
+For example, if you want to install a package called MyPackage.tar.gz, and assuming this is your directory structure:
+
+    archive
+
+            MyPackage
+                    MyPackage.tar.gz
+
+Go to your command prompt and type:
+
+$ cd archive
+$ python -m SimpleHTTPServer 9000
+
+This runs a simple HTTP server running on port 9000 and will list all packages (like MyPackage). Now you can install MyPackage using any Python package installer. Using pip
+
+$ pip install --extra-index-url=http://127.0.0.1:9000/ MyPackage
+
+Having a folder with the same name as the package name is crucial here. I got fooled by that, one time. But if you feel that creating a folder called MyPackage and keeping MyPackage.tar.gz inside that is redundant, you can still install MyPackage using:
+
+$ pip install  http://127.0.0.1:9000/MyPackage.tar.gz
+
+#5
+The Python Package Index (PyPI) is a repository of software for the Python programming language.
+
+term “package” in this context is being used as a synonym for a distribution (i.e. a bundle of software to be installed
+
+
+#6
+Python package installer- pip
+Pip is a package management system used to install and manage software packages written in Python.
+Wheels are a pre-built distribution format that provides faster installation
+
+Securely Download get-pip.py [1]
+
+Run python get-pip.py.
+
+To check pip version: pip -V
+
+First download pip: curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+Then run this command : python get-pip.py
+
+List all packages installed :  pip freeze
+
+To install/unistall a package using pip:
+
+pip install <pacakge>           // install
+pip install <pacakge>==1.2.2   // install a specific version
+pip uninstall <pacakge>       // uninstall
+$ pip install SomePackage            # latest version
+$ pip install SomePackage==1.0.4     # specific version
+$ pip install 'SomePackage>=1.0.4'     # minimum version
+
+To show details about an installed package: $ pip show Flask
+
+
+
+pip can search PyPI for packages using the pip search command:
+
+$ pip search "query"
+
+#Command Completion
+pip comes with support for command line completion in bash, zsh and fish.
+
+To setup for bash:
+
+$ pip completion --bash >> ~/.profile
+
+
+#10
+pip is available from your Python code via IMPORT PIP, you must not use pip’s internal APIs in this way. There are a number of reasons for this:
+
+    The pip code assumes that is in sole control of the global state of the program. Pip manages things like the logging system configuration, or the values of the standard IO streams, without considering the possibility that user code might be affected.
+   
+    Pip assumes that once it has finished its work, the process will terminate. It doesn’t need to handle the possibility that other code will continue to run after that point, so (for example) calling pip twice in the same process is likely to have issues.
+
+
+
+
+When globally installed packages are on the python path, and they conflict with the installation requirements, they are ignored, and not uninstalled.
+
+use: pip install --user SomeProject
+
+
+to install for version control system management abstraction layer for python.
+:pip install -e git+https://git.repo/some_pkg.git#egg=SomeProject 

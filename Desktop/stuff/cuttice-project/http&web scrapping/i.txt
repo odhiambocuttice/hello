@@ -1,0 +1,11 @@
+{
+  "args": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.22.0"
+  }, 
+  "origin": "41.80.141.107, 41.80.141.107", 
+  "url": "https://httpbin.org/get"
+}
